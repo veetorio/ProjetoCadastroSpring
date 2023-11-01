@@ -23,6 +23,8 @@ function conection(){
 
 
 
+ fetch("http//localhost:8080/cad").then(response => console.log(response))
+
 
 
 function coletar() {
