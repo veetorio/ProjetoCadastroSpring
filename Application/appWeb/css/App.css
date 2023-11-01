@@ -17,16 +17,18 @@ body {
   justify-content: center;
   align-items: center;
 }
-#conteiner_login{
-    padding: 10%;
-    background-color: rgb(245, 245, 245);
-
+#conteiner_login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10%;
+  background-color: rgb(245, 245, 245);
 }
-form{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 div {
   height: 50%;
@@ -45,9 +47,14 @@ button {
   transition: 0.5s;
   padding: 2%;
 }
-button:hover{
-    background-color: rgb(224, 224, 224);
+button:hover {
+  background-color: rgb(224, 224, 224);
 }
-button:focus{
-    
+button:focus {
+}
+p {
+  color: rgb(122, 122, 122);
+}
+h1{
+  margin-bottom: 5%;
 }
