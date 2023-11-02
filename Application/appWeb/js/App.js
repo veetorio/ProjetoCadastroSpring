@@ -1,32 +1,34 @@
-let Global_nome = document.getElementById("nickname")
-let Global_email = document.getElementById("email")
-let Global_senha = document.getElementById("nickname")
+const form = document.querySelector('form')
+const Gnome = document.querySelector('#nickname')
+const Gemail = document.querySelector('#email')
+const Gsenha = document.querySelector('#senha')
 
-const entidade = {
-        nome: Global_nome.value,
-        email: Global_email.value,
-        senha: Global_senha.value
-    }
 
-function conection(){
-    const url = "http//localhost:8080/post";
-    fetch(url,{
-        headers :{
-            'Accept':'Application/json',
-            'content-type': 'application/json'
+function conect(){
+    fetch('http://localhost:8080/database/enviar', {
+        headers: {
+            'Accept': "application/json",
+            'Content-Type': 'application/json'
         },
-        method : 'POST',
-        body : JSON.stringify(entidade)
-       
-    }).then((resp) => {console.log(resp)})
+        method: 'POST',
+        body: JSON.stringify({
+            email: Gemail.value,
+            nome: Gnome.value,
+            senha: Gsenha.value
+        })
+    }
+    ).then(Promise => console.log(Promise)).catch(erro => console.log(erro))
 }
+form.addEventListener('submit', event => {
+    event.preventDefault();
+    conect();
+}
+);
 
 
+function limpar(){
+    Gnome.value = '';
+    Gemail.value = '';
+    Gsenha.value = '';
 
- fetch("http//localhost:8080/cad").then(response => console.log(response))
-
-
-
-function coletar() {
-    conection(); 
 }

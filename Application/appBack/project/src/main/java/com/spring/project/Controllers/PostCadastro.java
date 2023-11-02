@@ -9,7 +9,8 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/BankAPI")
+@CrossOrigin("*")
+@RequestMapping("/database")
 public class PostCadastro {
 @Autowired
     private crudCadastros dao;
