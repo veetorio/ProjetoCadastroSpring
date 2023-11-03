@@ -40,7 +40,7 @@ div img {
 }
 input,
 button {
-  margin-top: 10%;
+  margin-top: 5%;
   border-radius: 5px;
   border: 1px solid rgb(151, 39, 255);
   color: blueviolet;
@@ -57,4 +57,12 @@ p {
 }
 h1{
   margin-bottom: 5%;
+}
+footer{
+  display: flex;
+}
+.icons{
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
 }
