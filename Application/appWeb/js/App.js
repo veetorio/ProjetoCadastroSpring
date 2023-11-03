@@ -4,6 +4,8 @@ const Gemail = document.querySelector('#email')
 const Gsenha = document.querySelector('#senha')
 
 
+
+
 function conect(){
     fetch('http://localhost:8080/database/enviar', {
         headers: {
@@ -17,7 +19,7 @@ function conect(){
             senha: Gsenha.value
         })
     }
-    ).then(Promise => window.alert("Cadastro feito com sucesso")).catch(error => window.alert("sua aplicação por conta de algum erro "))
+    ).then(Promise => window.alert("Cadastro feito com sucesso")).catch(error => window.alert("seus dados não foram enviado por conta de algum erro "))
 }
 form.addEventListener('submit', event => {
     event.preventDefault();
