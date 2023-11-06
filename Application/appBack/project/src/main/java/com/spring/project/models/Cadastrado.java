@@ -1,7 +1,7 @@
 package com.spring.project.models;
 
 import jakarta.persistence.*;
-import org.springframework.data.util.QTypeContributor;
+
 
 @Entity
 @Table(name = "tb_Cadastros")
