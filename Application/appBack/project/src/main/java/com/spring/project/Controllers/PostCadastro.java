@@ -17,8 +17,9 @@ public class PostCadastro {
     private crudCadastros dao;
 
 @GetMapping("/Cadastrados")
-    public List<Cadastrado> listaCadastrado(){
-    return (List<Cadastrado>) dao.findAll();
+    public   ResponseEntity<List<Cadastrado>>  listaCadastrado(){
+        List<Cadastrado> ListaDeCadastrados = (List<Cadastrado>) dao.findAll();
+        return ResponseEntity.status(200).body(ListaDeCadastrados);
 }
 @PostMapping("/enviar")
     public ResponseEntity<Cadastrado> userNew(@RequestBody Cadastrado novoCadastro){
