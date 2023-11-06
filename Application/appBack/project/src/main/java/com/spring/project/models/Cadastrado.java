@@ -1,12 +1,11 @@
 package com.spring.project.models;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.util.QTypeContributor;
-@Getter
-@Setter
-
+@Data
 @Entity
 @Table(name = "Tabela-Cadastrados")
 public class Cadastrado {

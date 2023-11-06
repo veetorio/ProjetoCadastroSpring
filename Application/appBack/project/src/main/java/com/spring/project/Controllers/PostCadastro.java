@@ -18,6 +18,7 @@ public class PostCadastro {
 
 @GetMapping("/Cadastrados")
     public   ResponseEntity<List<Cadastrado>>  listaCadastrado(){
+
         List<Cadastrado> ListaDeCadastrados = (List<Cadastrado>) dao.findAll();
         return ResponseEntity.status(200).body(ListaDeCadastrados);
 }
