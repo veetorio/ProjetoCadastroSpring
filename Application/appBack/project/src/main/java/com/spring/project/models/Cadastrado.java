@@ -6,6 +6,7 @@ import lombok.Setter;
 import org.springframework.data.util.QTypeContributor;
 @Getter
 @Setter
+
 @Entity
 @Table(name = "Tabela-Cadastrados")
 public class Cadastrado {
