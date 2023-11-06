@@ -22,8 +22,9 @@ public class PostCadastro {
         return ResponseEntity.status(200).body(ListaDeCadastrados);
 }
 @PostMapping("/enviar")
-    public ResponseEntity<Cadastrado> userNew(@RequestBody Cadastrado novoCadastro){
-    return ResponseEntity.status(201).body(dao.save(novoCadastro));
+    public Cadastrado userNew(@RequestBody Cadastrado novoCadastro){
+    Cadastrado newuser = dao.save(novoCadastro);
+    return newuser;
 }
 
 
