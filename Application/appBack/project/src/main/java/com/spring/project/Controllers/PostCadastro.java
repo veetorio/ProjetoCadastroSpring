@@ -23,8 +23,7 @@ public class PostCadastro {
 }
 @PostMapping("/enviar")
     public ResponseEntity<Cadastrado> userNew(@RequestBody Cadastrado novoCadastro){
-    Cadastrado retornaCadastro = dao.save(novoCadastro);
-    return ResponseEntity.status(201).body(retornaCadastro);
+    return ResponseEntity.status(201).body(dao.save(novoCadastro));
 }
 
 
