@@ -7,7 +7,7 @@ import org.springframework.data.util.QTypeContributor;
 @Getter
 @Setter
 @Entity
-@Table(name = "tb_Cadastros")
+@Table(name = "Tabela-Cadastrados")
 public class Cadastrado {
 
     @Id
