@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "tb_Cadastros")
+@Table(name = "Tabela-Cadastros")
 public class Cadastrado {
 
     @Id
