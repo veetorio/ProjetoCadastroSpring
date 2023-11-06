@@ -1,8 +1,9 @@
 package com.spring.project.models;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
-
+@Data
 @Entity
 @Table(name = "Tabela-Cadastros")
 public class Cadastrado {

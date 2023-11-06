@@ -3,6 +3,8 @@ import com.spring.project.Interfaces.crudCadastros;
 import com.spring.project.models.Cadastrado;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,15 +18,14 @@ public class PostCadastro {
     private crudCadastros dao;
 
 @GetMapping("/Cadastrados")
-    public   List<Cadastrado>  listaCadastrado(){
-
+    public   ResponseEntity<List<Cadastrado>>  listaCadastrado(){
         List<Cadastrado> ListaDeCadastrados = (List<Cadastrado>) dao.findAll();
-        return ListaDeCadastrados;
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(ListaDeCadastrados);
 }
 @PostMapping("/enviar")
-    public Cadastrado userNew(@RequestBody Cadastrado novoCadastro){
+    public ResponseEntity<Cadastrado> userNew(@RequestBody Cadastrado novoCadastro){
     Cadastrado newuser = dao.save(novoCadastro);
-    return newuser;
+    return ResponseEntity.status(HttpStatus.CREATED).body(newuser) ;
 }
 
 
