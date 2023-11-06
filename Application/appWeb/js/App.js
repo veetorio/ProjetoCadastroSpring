@@ -19,7 +19,7 @@ function conect(){
             senha: Gsenha.value
         })
     }
-    ).then(Promise => window.alert("Cadastro feito com sucesso")).catch( error => window.alert(" seus dados não foram enviado por conta de algum erro "))
+    ).then(Promise => window.alert("Cadastro feito com sucesso")).catch(window.alert(" seus dados não foram enviado por conta de algum erro "))
 }
 form.addEventListener('submit', event => {
     event.preventDefault();
