@@ -1,7 +1,7 @@
 package com.spring.project.Interfaces;
 
-import com.spring.project.models.Cadastrado;
+import com.spring.project.models.cadastrado;
 import org.springframework.data.repository.CrudRepository;
 
-public interface crudCadastros extends CrudRepository<Cadastrado,Integer> {
+public interface crudCadastros extends CrudRepository<cadastrado,Integer> {
 }
