@@ -21,8 +21,10 @@ function conect() {
     }
     else{
         if(Promise.status == 500){
-
             window.alert("Você inseriu algum dado repetido")
+        }
+        if(Promise.status == 404){
+          window.alert("A aplicação está em indisponibilidade")
         }
     }
   });
