@@ -11,7 +11,7 @@ import java.util.List;
 @CrossOrigin("*")
 @RequestMapping("/database")
 public class PostCadastro {
-    ServiceCad services;
+    ServiceCad services = new ServiceCad();
 
     @PostMapping("/enviar")
         public ResponseEntity<Cadastrado> criarUsuario(@RequestBody Cadastrado User){
