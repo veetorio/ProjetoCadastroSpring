@@ -18,6 +18,8 @@ public class ServiceCad {
     private crudCadastros dao;
     private PasswordEncoder codificador = new BCryptPasswordEncoder();
 
+   
+
     public List<Cadastrado> serviceList(){
         List<Cadastrado> ListaDeCadastrados = dao.findAll();
         return ListaDeCadastrados;

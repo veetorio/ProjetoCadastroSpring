@@ -1,5 +1,4 @@
 package com.spring.project.Controllers;
-import com.spring.project.Interfaces.crudCadastros;
 import com.spring.project.Service.ServiceCad;
 import com.spring.project.models.Cadastrado;
 import org.springframework.http.HttpStatus;
@@ -12,9 +11,6 @@ import java.util.List;
 @CrossOrigin("*")
 @RequestMapping("/database")
 public class PostCadastro {
-    private crudCadastros dao;
-
-    ServiceCad services = new ServiceCad();
 
     @PostMapping("/enviar")
         public ResponseEntity<Cadastrado> criarUsuario(@RequestBody Cadastrado User){
