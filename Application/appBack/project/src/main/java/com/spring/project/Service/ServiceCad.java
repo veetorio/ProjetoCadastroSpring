@@ -14,8 +14,11 @@ import java.util.List;
 @Service
 public class ServiceCad {
 
-    @Autowired
     private crudCadastros dao;
+    @Autowired
+    public ServiceCad(crudCadastros _dao){
+        this.dao = _dao;
+    }
     private PasswordEncoder codificador = new BCryptPasswordEncoder();
 
     public List<Cadastrado> serviceList(){
